@@ -22,14 +22,15 @@ def signer():
              print("please input a valid path/file...")
              
     elif a =="n" or a=="N":
-           print("installing for you...")
-           os.system("sudo apt-get install apksigner")
            app_path=input("enter the path of your app: ")
-           os.system("apksigner sign -key febrev.pk8 -cert febrev.x509.pem "+app_path)
+           os.system("chmod +x apksigner && ./apksigner sign -key febrev.pk8 -cert febrev.x509.pem "+app_path)
            print("###########################################")
            print("signed successfully..............!!")
     else:
          print("please provide valid input.....")
 
 if __name__=="__main__":
-      signer()
+  try:
+   signer()
+  except KeyboardInterrupt:
+   print("  User Interrupt Exit.........")
