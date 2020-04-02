@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import os
 print(""" 
  _____ _____ ____  ____  _______     __      _                       
